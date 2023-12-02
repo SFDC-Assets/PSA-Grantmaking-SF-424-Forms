@@ -84,22 +84,25 @@ You are using this Accelerator in conjunction with the Salesforce Lightning Expe
 
 A: In the initial release (v1.0) of the accelerator, we made the deliberate decision not to persist data back to the Individual Application object or any other object. This aspect is under evaluation for potential inclusion in a future release.
 
+
 ## Additional Resources
+
+- [SF-424 Forms](https://apply07.grants.gov/apply/forms/sample/SF424_4_0-V4.0.pdf)
+- [SF-424 Instructions](https://apply07.grants.gov/apply/forms/instructions/SF424D-V1.1-Instructions.pdf)
 
 
 ## Revision History
 
-<strong>1.0 Initial release (30 Dec 2023)</strong> - Provides the base SF-424 forms 
+<strong>1.0 Initial release (30 Dec 2023)</strong> - Provides the base SF-424 intake forms as OmniScripts.
+
 
 ## Acknowledgements
 
-<ul>
-  <li>Christine Talbot, PHD</li>
-  <li>Keegan Virtue</li>
-  <li>Laura Bell</li>
-  <li>Nicole Peters</li>
-  <li>Jen McClure</li>
-</ul>
+- Creator: **[Jen McClure](https://github.com/jmcclurenc)**, Distinguished Solution Engineer, Salesforce
+- Contributor: **Laura Bell**, Principal Solution Engineer, Salesforce
+- Contributor: **[Nicole Peters](https://github.com/SnpetersF2008)**, Lead Solution Engineer, Salesforce
+- Contributor: **Christine Talbot**, Business Strategy Senior Director, Salesforce
+- Contributor: **[Keegan Virtue](https://github.com/kvirtue123)**, Lead Solution Engineer, Salesforce
 
 
 ## Terms of Use
