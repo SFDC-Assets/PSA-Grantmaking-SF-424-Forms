@@ -1,35 +1,42 @@
 ![Public Sector Accelerators logo](/docs/Logo_GPSAccelerators_v01.png)
 
-# [Accelerator Name]
+# Grantmaking SF-424 Forms
 
-[Required. Show overview of the Accelerator. This should match the approved content used on the Accelerator listing.]
+**Use these OmniScripts to capture all the data for the SF-424 when an applicant applies for your grant.**
 
-Accelerator Listing: [insert url to the public listing on the Accelerator site](https://pubsec-accelerators.my.site.com/accelerators/) (tbd once published)
+Accelerator Listing: [Grantmaking SF-424 Forms](https://pubsec-accelerators.my.site.com/accelerators/accelerator/a0wDo000000UCF3IAO/grantmaking-sf424-forms)
 
 
 ## Description
 
-[Required. Description of the Accelerator. This should match the approved content used on the Accelerator listing, but could include additional content. This can include images/screenshots which must be stored in the /docs/ folder (no external images or images stored elsewhere in the repository.]
+Energize your implementation by introducing a user-friendly wizard-driven process that simplifies the completion of the intricate SF-424 form. Beyond incorporating the Public Sector Solutions Grantmaking data model, we've also included supplementary data elements to ensure compliance with the necessary requirements throughout the SF-424 process.
 
+The Standard Forms 424 (SF-424) form families represent the government-wide standard data sets and forms for grant application packages, which were developed in partnership with federal grantmaking agencies and the applicant community.  Leveraging OmniStudio capabilities, this accelerator provides supporting OmniScripts to facilitate an applicant completing the SF-424, based on the [form](https://apply07.grants.gov/apply/forms/sample/SF424_4_0-V4.0.pdf) and [instructions](https://apply07.grants.gov/apply/forms/instructions/SF424D-V1.1-Instructions.pdf) provided by Grants.gov.
+
+![Sample OmniScript SF-424](/docs/SF-424Sample.png)
 
 ## Included Assets
 
-[Required. List of the assets included in the Accelerator and where to find them. This can be as detailed as desired, but at a minimum it should be detailed by asset type (unmanaged package, datapack, documentation, and other assets) and the next level metadata type (Salesforce metadata, datapack contents, separate documentation files, etc.) and their counts.]
-
-This Accelerator includes the following assets:
+This Accelerator includes the following assets in the PSA-Grantmaking-SF424-Forms.json located in the /datapacks/ folder:
 <ol>
-  <li>An <strong>unmanaged package</strong> (link below; metadata is also found in the /force-app/main/default/ folder) that includes:
+  <li><strong>OmniScripts</strong> (x5)</li>
+  <ul>
+    <li>SF424ParentOS - Main OmniScript for the SF-424 that calls the following OmniScripts:</li>
     <ul>
-      <li>Apex classes (x2)</li>
-      <li>Custom objects (x4)</li>
-      <li>Lightning Web Components (LWCs) (x2)</li>
+     <li>SF424ApplicantInformation</li>
+     <li>SF424EstimatedFunding</li>
+     <li>SF424ProgramAndProjectInformation</li>
+     <li>SF424Questions</li>
     </ul>
-  </li>
-  <li><strong>OmniScripts</strong> (x2) located in the /datapacks/ folder</li>
+  </ul>
+       <li><strong>DataRaptors</strong> (x2)</li>
+  <ul>
+    <li>grDRGetUserAccountInfo - pulls the running User's Account information</li>
+    <li>grDRGetFundingOpInfo - pulls in the Funding Opportunity information for the Individual Application</li>
+  </ul>
   <li><strong>Documentation</strong>, including:
     <ul>
       <li>This readme file</li>
-      <li>White paper providing detailed setup instructions and a data dictionary (located in the /docs/ folder)</li>
     </ul>
   </li>
 </ol>
@@ -37,58 +44,65 @@ This Accelerator includes the following assets:
 
 ## Before You Install
 
-[Required. Pre-requisites, dependencies, license requirements, and other assumptions and caveats should be declared here. Consider content that's specific to the Accelerator and the type of product or technology involved. The PMO may also add assumptions or notes that more broadly apply to the entire program.]
+Follow the instructions to Install the Accelerator for PSA-Grantmaking-FIBF-DataModel
 
-**License Requirements** [Required]
-* Example: License Public Sector Solutions - requires Foundations or Advanced for internal; requires Communities for external
+Note: This package will install successfully without PSA-Grantmaking-FIBF-DataModel, but the DataRaptors depend on the Data Model provided within that accelerator.
 
-**Accelerator or Technology-Specific Assumptions** [Optional]
-* Example: You have installed and configured OmniStudio and provided permission to PSS objects.
-* Example: You are using OmniStudio's native runtime.
+**License Requirements**
 
-**General Assumptions** [Optional]
-* Example: You are using this Accelerator in a sandbox or test environment. It is recommended that you not install any Accelerator directly into production environments.
-* Example: If you do not have a Salesforce org licensed to you, you may try Public Sector Solutions for free with one of our [trial environments](https://developer.salesforce.com/free-trials/comparison/public-sector).
-* Example: You are using this Accelerator in conjunction with the Salesforce Lightning Experience (LEX) - not the Classic UI.
+License Public Sector Solutions - requires Public Sector Foundations Advanced for internal users; requires Customer Community license for external users.  
+
+If you would like to test this Accelerator, you may sign up for a [Public Sector Solutions Base Trial Org](https://www.salesforce.com/form/industries/government/public-sector-base-trial/).
+
+**Accelerator or Technology-Specific Assumptions** 
+
+You have installed and configured OmniStudio and provided permission to PSS objects.
+
+**General Assumptions** 
+
+You are using this Accelerator in a sandbox or test environment. It is recommended that you not install any Accelerator directly into production environments.
+You are using this Accelerator in conjunction with the Salesforce Lightning Experience (LEX) - not the Classic UI.
 
 
 ## Installation
 
-[Required. Steps necessary for installing the Accelerator. This can include images/screenshots which must be stored in the /docs/ folder (no external images or images stored elsewhere in the repository.]
+<ul>
+  <li>Open the OmniStudio App</li>
+  <li>Navigate to OmniScripts and Click Import </li>
+  <li>Click Browse and locate the datapack PSA-Grantmaking-SF424-Forms.json</li>
+  <li>Click Next</li>
+  <li>Click Next</li>
+  <li>Click Activate Later</li>
+</ul>
 
-
-## Post-Install Setup & Configuration
-
-[Required. Steps necessary for using the Accelerator. This can include images/screenshots which must be stored in the /docs/ folder (no external images or images stored elsewhere in the repository.]
+![Installation](/docs/ImportPSAGrantmakingSF424Forms.gif)
 
 
 ## FAQs
 
-[Optional. Preemptive list of common questions or situations that need to be explained in how the Accelerator works (or doesn't).]
+**_Q: Why doesn't the data get saved to the Individual Application?_**
 
-**_Q: Do I really need an FAQ for my Accelerator?_**
-
-A: Great question! Perhaps not, but if you had common misunderstandings or confusion during beta testing with an aspect of setup or use, you may find it helpful to create some related FAQs. You might also wish to use FAQs to reiterate a critical point found in this readme or any other included documentation. An FAQ may also help point out a recommendation or tip about how to use your Accelerator.
+A: In the initial release (v1.0) of the accelerator, we made the deliberate decision not to persist data back to the Individual Application object or any other object. This aspect is under evaluation for potential inclusion in a future release.
 
 ## Additional Resources
-
-[Optional. Summary list of additional links and references that you think are useful to. These links should be restricted to official Salesforce web resources and should not include third party references. Use an unordered list.]
 
 
 ## Revision History
 
-[Required. High level description of the Accelerator's versions, with the date it was made publicly available. If more detailed release notes or change log are necessary, create a separate readme in the same folder and link to it from here.]
-<strong>1.0 Initial release (30 Oct 2023)</strong> - Short description of the release. For detailed release notes and change logs, provide a link to another readme in the /docs/ folder of this repository.
-
+<strong>1.0 Initial release (30 Dec 2023)</strong> - Provides the base SF-424 forms 
 
 ## Acknowledgements
 
-[Optional. Names of individuals involved in the creation, publication, and maintenance of this Accelerator and a link to their Github user profile.]
+<ul>
+  <li>Christine Talbot, PHD</li>
+  <li>Keegan Virtue</li>
+  <li>Laura Bell</li>
+  <li>Nicole Peters</li>
+  <li>Jen McClure</li>
+</ul>
 
 
 ## Terms of Use
-
-[Required. Cleared terms of use.  This must match the approved content used on the Accelerator listing.]
 
 Thank you for using Global Public Sector (GPS) Accelerators.  Accelerators are provided by Salesforce.com, Inc., located at 1 Market Street, San Francisco, CA 94105, United States.
 
