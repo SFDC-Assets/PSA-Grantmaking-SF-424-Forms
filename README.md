@@ -4,7 +4,7 @@
 
 **Use these OmniScripts to capture all the data for the SF-424 when an applicant applies for your grant.**
 
-Accelerator Listing: [Grantmaking SF-424 Forms](https://pubsec-accelerators.my.site.com/accelerators/accelerator/a0wDo000000UCF3IAO/grantmaking-sf424-forms)
+Accelerator Listing: [Grantmaking SF-424 Forms](https://gpsaccelerators.developer.salesforce.com/accelerator/a0wDo000000UCF3IAO/grantmaking-sf424-forms)
 
 
 ## Description
